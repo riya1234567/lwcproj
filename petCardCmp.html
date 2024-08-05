@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="get details from back">
+        <template if:true={pets}>  
+            <div class = "slds-grid slds-gutters slds-wrap">     
+                <template for:each={pets} for:item="pet"> 
+                        <div key={pet.Id} data-id = {pet.Id} class = "slds-theme_shade  slds-p-around_small slds-m-around_small  slds-col slds-size_5-of-12"> 
+                            <div>Name:  {pet.Name}</div>
+                            <div>Type:  {pet.Type__c}</div>
+                            <div>Birthday:  {pet.Birthday__c}</div>
+                            <div>Color:  {pet.color__c}</div>
+                            <div>Desciption:  {pet.Description__c}</div>
+                            <div class = "slds-text-color_success">Am I adoptable ?:  {pet.For_Adoption__c}</div>
+                            <template if:true={pet.For_Adoption__c}>  
+                                <div class = "slds-m-around_medium"><lightning-button data-id= {pet.Id} variant="success" label="Adopt ME"  onclick={handleClickBUTTON}></lightning-button></div>
+                                    <c-pet-adoption-form-cmp pet-id={selectedPetId} show-form={showAdoptionForm}></c-pet-adoption-form-cmp>
+                            </template> 
+                        </div>         
+                </template>
+            </div> 
+        </template>
+        <template if:true={error}>
+            Error: {error}
+        </template>
+    </lightning-card>   
+</template>

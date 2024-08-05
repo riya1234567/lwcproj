@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="adoption form">
+        <template if:true={showForm}>
+        <div> thanks for adopting</div>
+    <lightning-input label = "First Name" value={contact.FirstName} onchange={handleInputChangeButton} data-id="FirstName"></lightning-input>
+    <lightning-input label = "last Name" value={contact.LastName} onchange={handleInputChangeButton} data-id="LastName"></lightning-input>
+    <lightning-input label = "phone" value={contact.Phone} onchange={handleInputChangeButton} data-id="Phone"></lightning-input>
+    <lightning-input label = "email" value={contact.Email} onchange={handleInputChangeButton} data-id="Email"></lightning-input>
+    <lightning-input label = "street" value={contact.Street} onchange={handleInputChangeButton} data-id="Street"></lightning-input>
+    <lightning-input label = "postal code" value={contact.Code} onchange={handleInputChangeButton} data-id="Code"></lightning-input>
+    <lightning-input label = "city" value={contact.City} onchange={handleInputChangeButton} data-id="City"></lightning-input>
+    <lightning-button variant = "brand" label = "click to adopt me"  onclick = {handleButtonTest}></lightning-button>
+</template> 
+    </lightning-card> 
+ 
+</template>

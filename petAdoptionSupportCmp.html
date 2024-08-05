@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title = "details">
+        <c-pet-card-cmp></c-pet-card-cmp>
+        <lightning-tabset active-tab-value="one">
+            <lightning-tab label = "All"  value = "one" onactive={handleAllClick}></lightning-tab>
+            <lightning-tab label = "ADAPTED/SOLD ALREADY" value = "two" onactive={handleAdoptedClick}></lightning-tab>
+            <lightning-tab label = "FOR ADOPTED" value = "three" onactive={handleForAdoptedClick}></lightning-tab>
+        </lightning-tabset> 
+            <!--<lightning-button variant="brand" label="All" value="one" onclick={handleAllClick}></lightning-button>
+            <lightning-button variant="brand" label="Adopted"  onclick={handleAdoptedClick}></lightning-button>
+            <lightning-button  variant="brand" label="For Adoption" onclick={handleForAdoptedClick}></lightning-button>-->
+  
+    </lightning-card>  
+</template>
+
+
+    
